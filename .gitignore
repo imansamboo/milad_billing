@@ -7,3 +7,6 @@
 /backend/var/
 /backend/vendor/
 /.idea/
+/excel_parser/.idea
+*/.idea
+/excel_parser/main
