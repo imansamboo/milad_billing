@@ -7,6 +7,8 @@ import (
     "net/http"
     "encoding/json"
     "github.com/gorilla/mux"
+    orm  "./orm"
+    excelreader "./excelreader"
 )
 
 type Article struct {
@@ -43,6 +45,7 @@ func handleRequests() {
     myRouter.HandleFunc("/article/{id}", deleteArticle).Methods("DELETE")
     myRouter.HandleFunc("/article/{id}", updateArticle).Methods("PUT")
     myRouter.HandleFunc("/article", createNewArticle).Methods("POST")
+    myRouter.HandleFunc("/excel", insertExcel2Database).Methods("POST")
     myRouter.HandleFunc("/article/{id}", returnSingleArticle)
     log.Fatal(http.ListenAndServe(":10000", myRouter))
 }
@@ -125,4 +128,15 @@ func main() {
         Article{Id: "2", Title: "Hello 2", Desc: "Article Description", Content: "Article Content"},
     }
     handleRequests()
+}
+
+func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
+    reqBody, _ := ioutil.ReadAll(r.Body)
+    excelreader.ConvertExcel2Map("report_files/report2.xlsx")
+    fmt.Fprintln(w, "%+v", string(reqBody))
+
+    orm.Insert()
+    fmt.Println("1212")
+    fmt.Fprintf(w, "Welcome to the Excel Page!")
+    fmt.Println("Endpoint Hit: Excel Page")
 }
