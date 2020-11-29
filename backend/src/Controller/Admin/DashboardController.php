@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Ticket;
 use App\Entity\User;
+use App\Entity\TicketPost;
+use App\Entity\Cdr;
 use EasyCorp\Bundle\EasyAdminBundle\Router\CrudUrlGenerator;
-use App\Controller\Admin\TicketCrudController;
-use App\Controller\Admin\UserCrudController;
 use Symfony\Component\Security\Core\User\UserInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Config\UserMenu;
 
@@ -49,8 +49,11 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::section('Tickets');
         yield MenuItem::linkToCrud('Tickets', 'fa fa-ticket', Ticket::class);
+        yield MenuItem::linkToCrud('Ticket Posts', 'fa fa-ticket', TicketPost::class);
         yield MenuItem::section('User Management');
         yield MenuItem::linkToCrud('Users', 'fa fa-user', User::class);
+        yield MenuItem::section('Cdr');
+        yield MenuItem::linkToCrud('Cdr List', 'fa fa-file', Cdr::class);
         yield MenuItem::section('Data Management');
 
     }

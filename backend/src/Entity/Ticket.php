@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TicketRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,6 +43,16 @@ class Ticket
      * @ORM\Column(type="string", length=255)
      */
     private $subject;
+
+    /**
+     * @ORM\OneToMany(targetEntity=TicketPost::class, mappedBy="ticket", orphanRemoval=true)
+     */
+    private $ticketPosts;
+
+    public function __construct()
+    {
+        $this->ticketPosts = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -103,6 +115,36 @@ class Ticket
     public function setSubject(string $subject): self
     {
         $this->subject = $subject;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|TicketPost[]
+     */
+    public function getTicketPosts(): Collection
+    {
+        return $this->ticketPosts;
+    }
+
+    public function addTicketPost(TicketPost $ticketPost): self
+    {
+        if (!$this->ticketPosts->contains($ticketPost)) {
+            $this->ticketPosts[] = $ticketPost;
+            $ticketPost->setTicket($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTicketPost(TicketPost $ticketPost): self
+    {
+        if ($this->ticketPosts->removeElement($ticketPost)) {
+            // set the owning side to null (unless already changed)
+            if ($ticketPost->getTicket() === $this) {
+                $ticketPost->setTicket(null);
+            }
+        }
 
         return $this;
     }
