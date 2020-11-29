@@ -132,7 +132,14 @@ func main() {
 
 func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
     reqBody, _ := ioutil.ReadAll(r.Body)
-    excelreader.ConvertExcel2Map("report_files/report2.xlsx")
+    err, cdrList := excelreader.ConvertExcel2EntityList("report_files/report2.xlsx")
+    if err != nil {
+    	panic(err)
+	}
+	err = orm.BatchInsert(cdrList)
+	if err != nil {
+		panic(err)
+	}
     fmt.Fprintln(w, "%+v", string(reqBody))
 
     orm.Insert()
