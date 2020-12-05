@@ -1,12 +1,10 @@
 package excelreader
 
 import (
-	"fmt"
+	vars "../vars"
 	"github.com/360EntSecGroup-Skylar/excelize"
 	_ "github.com/360EntSecGroup-Skylar/excelize"
-	"reflect"
 	_ "strconv"
-	vars "../vars"
 	"strings"
 )
 
@@ -15,8 +13,6 @@ func ConvertExcel2EntityList(path string) (error, []vars.CDREntity) {
 	var f, err = excelize.OpenFile(path)
 	cdrList := []vars.CDREntity{}
 	if err != nil {
-		fmt.Println("not valid file")
-		fmt.Println(err)
 		return err, nil
 	}
 	cnt := 0
@@ -33,14 +29,14 @@ func ConvertExcel2EntityList(path string) (error, []vars.CDREntity) {
 			continue
 		}
 		cdrEntity := vars.CDREntity{}
+		header2Entity := vars.GetHeader2Entity()
 		for _, colCell := range row {
-			fmt.Print(colCell, "\t")
-			field := vars.Address2Header[cellAddress]
-			settField(&cdrEntity, field, colCell)
+			header := vars.Address2Header[cellAddress]
+			field := header2Entity[header]
+			vars.SetField(&cdrEntity, field, colCell)
 			cellAddress = nextCell(cellAddress)
 		}
 		cdrList = append(cdrList, cdrEntity)
-		fmt.Println()
 	}
 	return nil, cdrList
 
@@ -73,10 +69,6 @@ func nextCell(cellAddress string) string{
 		return "A"
 	}
 	position := strings.Index(vars.ABC, cellAddress)
-	return vars.ABC[position: position + 1]
+	return vars.ABC[position + 1: position + 2]
 }
 
-func settField(v *vars.CDREntity, field string, value string) {
-	r := reflect.ValueOf(v).Elem()
-	r.FieldByName(field).SetString(value)
-}

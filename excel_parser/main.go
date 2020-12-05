@@ -1,14 +1,16 @@
 package main
 
 import (
+    excelreader "./excelreader"
+    orm "./orm"
+	_"bufio"
+    "encoding/json"
     "fmt"
+    "github.com/gorilla/mux"
     "io/ioutil"
     "log"
     "net/http"
-    "encoding/json"
-    "github.com/gorilla/mux"
-    orm  "./orm"
-    excelreader "./excelreader"
+	_"os"
 )
 
 type Article struct {
@@ -131,7 +133,16 @@ func main() {
 }
 
 func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Welcome to the Excel Page!")
+
     reqBody, _ := ioutil.ReadAll(r.Body)
+
+	//fileName := file_handler.RandStringRunes(8)
+	//fileName += ".xlsx"
+	//path := "report_files/" + fileName
+	//f, err := os.Create(path)
+	//defer f.Close()
+	//f.Write(reqBody)
     err, cdrList := excelreader.ConvertExcel2EntityList("report_files/report2.xlsx")
     if err != nil {
     	panic(err)
@@ -141,9 +152,6 @@ func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
 		panic(err)
 	}
     fmt.Fprintln(w, "%+v", string(reqBody))
-
     orm.Insert()
-    fmt.Println("1212")
-    fmt.Fprintf(w, "Welcome to the Excel Page!")
-    fmt.Println("Endpoint Hit: Excel Page")
+    fmt.Println("Endpoint Hit: Excel Page saved in database")
 }

@@ -1,15 +1,15 @@
 package orm
 
 import (
+	tools "../tools"
+	vars "../vars"
 	"database/sql"
 	"fmt"
-	"reflect"
+	_ "fmt"
+	_ "github.com/go-sql-driver/mysql"
+	_ "reflect"
 	"strings"
 	_ "time"
-	_ "fmt"
-	_ "reflect"
-	_ "github.com/go-sql-driver/mysql"
-	vars "../vars"
 )
 
 func getConnection() *sql.DB {
@@ -31,36 +31,33 @@ func BatchInsert(cdrInput []vars.CDREntity) error {
 	// make n1, n2 from for in entity field
 	entity_fields := []string{}
 	columns_string := ""
-	input_blanks := ""
+	input_blanks := "("
 	count := 0
-	for _, value := range vars.Header2Entity {
+	for _, value := range vars.GetHeader2Entity() {
 		entity_fields = append(entity_fields, value)
-		columns_string += columns_string + value
-		input_blanks += input_blanks + "?"
+		columns_string += tools.UnderScore(value)
+		input_blanks +=  "?"
 		count += 1
-		if count < len(entity_fields){
+		if count < len(vars.GetHeader2Entity()){
 			columns_string += ", "
+			input_blanks +=  ","
 		}
 
 	}
-	sqlStr := "INSERT INTO custom_cdr ("+ columns_string +") VALUES "
+	input_blanks +=  ")"
+	sqlStr := "INSERT INTO cdr ("+ columns_string +") VALUES "
 	valueStrings := make([]string, 0, len(cdrInput))
 	valueArgs := make([]interface{}, 0, len(cdrInput) * len(vars.Header2Entity))
 	for _, cdr := range cdrInput {
-		valueStrings = append(valueStrings, "(" + input_blanks + ")")
-		for entity_field := range entity_fields{
-			valueArgs = append(valueArgs, getField(&cdr, string(entity_field)))
+		valueStrings = append(valueStrings, input_blanks)
+		for _, entity_field := range entity_fields{
+			valueArgs = append(valueArgs, vars.GetField(&cdr, entity_field))
 		}
 	}
-
 	stmt := fmt.Sprintf(sqlStr + " %s",
 		strings.Join(valueStrings, ","))
 	_, err := db.Exec(stmt, valueArgs...)
 	return err
 }
 
-func getField(v *vars.CDREntity, field string) string {
-	r := reflect.ValueOf(v)
-	f := reflect.Indirect(r).FieldByName(field)
-	return f.String()
-}
+

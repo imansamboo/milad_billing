@@ -18,7 +18,7 @@ class Cdr
     private $id;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=40, nullable=true)
      */
     private $sim_number;
 
@@ -48,7 +48,7 @@ class Cdr
     private $time;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=40, nullable=true)
      */
     private $originator_number;
 
@@ -137,7 +137,7 @@ class Cdr
         return $this->id;
     }
 
-    public function getSimNumber(): ?int
+    public function getSimNumber(): ?string
     {
         return $this->sim_number;
     }
@@ -209,7 +209,7 @@ class Cdr
         return $this;
     }
 
-    public function getOriginatorNumber(): ?int
+    public function getOriginatorNumber(): ?string
     {
         return $this->originator_number;
     }

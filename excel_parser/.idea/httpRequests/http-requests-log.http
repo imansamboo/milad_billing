@@ -1,260 +1,602 @@
-DELETE http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "3 Newly  Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
+
+
+< /home/iman/Documents/projects/milad/excel_parser/report_files/report2.xlsx
+--null--
 
 ###
 
-PUT http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "3 Newly  Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T075404.200.txt
+
+< /home/iman/Documents/projects/milad/excel_parser/report_files/report2.xlsx
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly  Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T075342.200.txt
+
+< /home/iman/Documents/projects/milad/excel_parser/report_files/report2.xlsx
+--null--
 
 ###
 
-PUT http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly  Created postt",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T075024.200.txt
+
+< /home/iman/Documents/projects/milad/excel_parser/report_files/report2.xlsx
+--null--
 
 ###
 
-PUT http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly  Created postt",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T074938.200.txt
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-DELETE http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-DELETE http://localhost:10000/article/3?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T074834.200.txt
 
-###
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
-POST http://localhost.com:10000/article
-Content-Type: application/json
-
-{
-  "Id": "3",
-  "Title": "Hello",
-  "desc": "Article Description",
-  "content": "Article Content"
-}
+<> 2020-12-04T062432.200.txt
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T073757.200.txt
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-{     "Id": "3",      "Title": "Newly Created Post",      "desc": "The description for my new post",      "content": "my articles content"  }
+--null
 
-<> 2020-11-27T073610.200.txt
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-11-27T073547.200.txt
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost.com:10000/article
-Content-Type: application/json
-
-{
-  "Id": "3",
-  "Title": "Hello",
-  "Desc": "Article Description",
-  "Content": "Article Content"
-}
-
-###
-
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-<> 2020-11-27T073427.200.txt
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost.com:10000/article
-Content-Type: application/json
-
-{
-  "Id": "1",
-  "Title": "Hello",
-  "Desc": "Article Description",
-  "Content": "Article Content"
-}
-
-###
-
-POST https://httpbin.org/post
-Content-Type: application/json
-
-{
-  "id": 8fe9d334-7554-47dd-a03e-bfadd8ea31da,
-  "price": 621,
-  "ts": 1606492812,
-  "value": "content"
-}
-
-<> 2020-11-27T073012-1.200.json
-
-###
-
-POST https://httpbin.org/post
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; name="element-name"
-Content-Type: text/plain
-
-Name
---WebAppBoundary
-Content-Disposition: form-data; name="data"; filename="data.json"
-Content-Type: application/json
-
-< /tmp/http_request_input_file.txt
---WebAppBoundary--
-
-<> 2020-11-27T073012.200.json
-
-###
-
-POST https://httpbin.org/post
-Content-Type: application/x-www-form-urlencoded
-
-id=999&value=content
-
-<> 2020-11-27T073011.200.json
-
-###
-
-POST https://httpbin.org/post
-Content-Type: application/json
-
-{
-  "id": 999,
-  "value": "content"
-}
-
-<> 2020-11-27T073010.200.json
-
-###
-
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
 
-###
+--null
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
-Accept: */*
-Cache-Control: no-cache
 
-5454564
-
-<> 2020-11-27T072435.200.txt
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/article?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 
-POST http://localhost:10000/articles?Id=3&Title=sss&Desc=sss&Content=sss
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
 Accept: */*
 Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
+
+###
+
+POST http://localhost:10000/excel?Id=3&Title=sss&Desc=sss&Content=sss
+Accept: */*
+Cache-Control: no-cache
+
+--null
+
+
+< /home/iman/Documents/projects/milad/README.md
+--null--
 
 ###
 

@@ -47,4 +47,26 @@ class TicketRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function getChoices(){
+        $all_objects = $this->findAll();
+        $all_objects_2_array = array_map(
+            function ($object){
+                return $object->getId();
+            },
+            $all_objects
+        );
+        return $all_objects_2_array;
+    }
+
+    public function getFavoriteChoices($key="subject", $value="id"){
+        $all_objects = $this->findAll();
+        $all_objects_2_array = array();
+        $func_key = "get" . ucwords($key);
+        $func_value = "get" . ucwords($value);
+        foreach ($all_objects as $object){
+            $all_objects_2_array[$object->$func_key()] = $object;
+        }
+        return $all_objects_2_array;
+    }
 }

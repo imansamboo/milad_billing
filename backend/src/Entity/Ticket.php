@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=TicketRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Ticket
 {
@@ -24,10 +25,6 @@ class Ticket
      */
     private $status;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $owner;
 
     /**
      * @ORM\Column(type="datetime")
@@ -48,6 +45,12 @@ class Ticket
      * @ORM\OneToMany(targetEntity=TicketPost::class, mappedBy="ticket", orphanRemoval=true)
      */
     private $ticketPosts;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="tickets")
+     */
+    private $creator;
+
 
     public function __construct()
     {
@@ -71,17 +74,6 @@ class Ticket
         return $this;
     }
 
-    public function getOwner(): ?int
-    {
-        return $this->owner;
-    }
-
-    public function setOwner(int $owner): self
-    {
-        $this->owner = $owner;
-
-        return $this;
-    }
 
     public function getCreatedAt(): ?\DateTimeInterface
     {
@@ -148,4 +140,38 @@ class Ticket
 
         return $this;
     }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps(): void
+    {
+        $this->setModifiedAt(new \DateTime('now'));
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+    public function getCreator(): ?User
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?User $creator): self
+    {
+        $this->creator = $creator;
+
+        return $this;
+    }
+
+    public function getFirstCreator(){
+        if($this->getCreator() === null){
+            return "not set";
+        }
+        return $this->getCreator()->getUsername();
+    }
+
+
+
 }

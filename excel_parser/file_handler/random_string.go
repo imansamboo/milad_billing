@@ -1,4 +1,4 @@
-package vars
+package file_handler
 
 import (
 	"math/rand"

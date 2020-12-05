@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=TicketPostRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class TicketPost
 {
@@ -90,5 +91,23 @@ class TicketPost
         $this->created_at = $created_at;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps(): void
+    {
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+    public function getOwner(){
+        if($this->getUser() === null){
+            return "not set";
+        }
+        return $this->getUser()->getUsername();
     }
 }
