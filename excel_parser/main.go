@@ -2,15 +2,19 @@ package main
 
 import (
     excelreader "./excelreader"
+    file_handler "./file_handler"
     orm "./orm"
-	_"bufio"
+    _ "bufio"
     "encoding/json"
     "fmt"
     "github.com/gorilla/mux"
+    "io"
     "io/ioutil"
     "log"
     "net/http"
-	_"os"
+    "os"
+    _ "os"
+    "strings"
 )
 
 type Article struct {
@@ -134,16 +138,32 @@ func main() {
 
 func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "Welcome to the Excel Page!")
-
-    reqBody, _ := ioutil.ReadAll(r.Body)
-
-	//fileName := file_handler.RandStringRunes(8)
-	//fileName += ".xlsx"
-	//path := "report_files/" + fileName
-	//f, err := os.Create(path)
-	//defer f.Close()
-	//f.Write(reqBody)
-    err, cdrList := excelreader.ConvertExcel2EntityList("report_files/report2.xlsx")
+    err := r.ParseMultipartForm(32 << 20) // limit your max input length!
+    if err != nil {
+        panic(err)
+    }
+    //var buf bytes.Buffer
+    // in your case file would be fileupload
+    file, header, err := r.FormFile("attachment")
+    if err != nil {
+        panic(err)
+    }
+    defer file.Close()
+    name := strings.Split(header.Filename, ".")
+    fmt.Printf("File name %s\n", name[0])
+    // Copy the file data to my buffer
+    //io.Copy(&buf, file)
+    // do something with the contents...
+    // I normally have a struct defined and unmarshal into a struct, but this will
+    // work as an example
+    //reqBody, _ := ioutil.ReadAll(r.MultipartForm.File)
+	fileName := file_handler.RandStringRunes(8)
+	fileName += ".xlsx"
+	path := "report_files/" + fileName
+	f, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE, 0666)
+	defer f.Close()
+	io.Copy(f, file)
+	err, cdrList := excelreader.ConvertExcel2EntityList(path)
     if err != nil {
     	panic(err)
 	}
@@ -151,7 +171,6 @@ func insertExcel2Database(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-    fmt.Fprintln(w, "%+v", string(reqBody))
     orm.Insert()
     fmt.Println("Endpoint Hit: Excel Page saved in database")
 }

@@ -20,31 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f51ac51a-8258-4ea5-a4eb-0021463a6ce9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file_handler/file_handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file_handler/random_string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/tool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/config/packages/dev/maker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/src/Form/UploadCdrFormType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AdminLTE" beforeDir="false" afterPath="$PROJECT_DIR$/../AdminLTE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/Entity/Cdr.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Entity/Cdr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Controller/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Controller/Admin/TicketCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Controller/Admin/TicketCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Controller/Admin/TicketPostCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Controller/Admin/TicketPostCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Controller/Admin/UserCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Controller/Admin/UserCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Entity/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Entity/Ticket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Entity/TicketPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Entity/TicketPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-mysql" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-mysql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T072435.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073010.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073011.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073012-1.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073012.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073427.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073547.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073610.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T073757.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T074834.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T074938.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T075024.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T075342.200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2020-11-27T075404.200.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/excelreader/excelreader.go" beforeDir="false" afterPath="$PROJECT_DIR$/excelreader/excelreader.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orm/orm.go" beforeDir="false" afterPath="$PROJECT_DIR$/orm/orm.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +56,6 @@
   <component name="GOROOT" path="/usr/lib/go-1.10" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response55.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ksXhHzZELiaqNtofI6ABQUcykv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -818,10 +810,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="409" y="198" width="605" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1606556349292" />
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607113987079">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607797823870">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1607113987079" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1607797823870" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1606493243004">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -852,8 +844,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/main.go</url>
-          <line>38</line>
+          <line>42</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>95</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
